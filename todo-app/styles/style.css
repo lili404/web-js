@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+header h1 {
+  margin-bottom: 1rem;
+}
+header input[type=text] {
+  width: 384px;
+  height: 36px;
+  padding-left: 8px;
+  border: 1px solid #888888;
+}
+header input[type=submit] {
+  width: 96px;
+  height: 36px;
+}
+
+button,
+input[type=submit] {
+  border: 1px solid #888888;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+main {
+  padding: 0 4rem;
+}
+main .task-list h2 {
+  padding-bottom: 1rem;
+}
+main .tasks .task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  overflow: hidden;
+  transform: translateX(0px);
+  transition: transform 0.5s ease;
+}
+main .tasks .task.slide-in {
+  animation: slideIn 0.5s ease;
+}
+main .tasks .task.slide-out {
+  animation: slideOut 0.5s ease;
+}
+main .tasks .task .content .text {
+  padding: 10px;
+  border: 0;
+  background-color: inherit;
+}
+main .tasks .task:nth-child(odd) {
+  background-color: #fdfdfd;
+}
+main .tasks .task:last-child {
+  margin-bottom: 0;
+}
+main .tasks .task .actions .edit,
+main .tasks .task .actions .delete {
+  width: 64px;
+  height: 36px;
+}/*# sourceMappingURL=style.css.map */
