@@ -2,8 +2,8 @@ const droplistToggle = document.getElementById("droplist-toggle");
 const droplist = document.getElementById("nav");
 
 const toggleDroplist = () => {
-  const droplistDisplayValue = window.getComputedStyle(droplist);
-  if (droplistDisplayValue.display === "none") {
+  const droplistStyles = window.getComputedStyle(droplist);
+  if (droplistStyles.display === "none") {
     droplist.style.display = "block";
     droplistToggle.style.transform = "scaleY(-1)";
   } else {
