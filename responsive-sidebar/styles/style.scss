@@ -1,0 +1,96 @@
+@import url("https://unpkg.com/css.gg@2.0.0/icons/css/chevron-down.css");
+
+:root {
+  --bg-color: #121212;
+  --navbar-color: #212121;
+  --main-color: #255db3;
+  --white: #ededed;
+  --dark-gray: #484848;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+  display: flex;
+  color: var(--white);
+  .nav-placeholder {
+    height: 100vh;
+    width: 5rem;
+  }
+  .content {
+    flex: 1;
+    background-color: var(--bg-color);
+  }
+}
+
+nav {
+  height: 100vh;
+  width: 5rem;
+  position: fixed;
+  overflow: hidden;
+  background-color: var(--navbar-color);
+  transition: width 0.3s ease;
+
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    li {
+      height: 5rem;
+      display: flex;
+      padding: 0.75rem;
+      a {
+        width: 100%;
+        height: 3.5rem;
+        display: flex;
+        padding: 0 0.75rem;
+        align-items: center;
+        text-decoration: none;
+        gap: 2rem;
+        color: var(--white);
+        transition: color 0.5s ease;
+
+        i.material-icons {
+          font-size: 2rem;
+          color: var(--dark-gray);
+        }
+        &:hover {
+          i.material-icons {
+            color: var(--white);
+          }
+        }
+      }
+      &:first-child {
+        a {
+          padding: 0 0.5rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+          gap: 1.5rem;
+          cursor: pointer;
+
+          i {
+            font-size: 2.5rem;
+            color: var(--main-color);
+          }
+        }
+      }
+      &:nth-child(5) {
+        margin-top: auto;
+      }
+    }
+
+    hr {
+      margin: 0 1rem;
+      background-color: var(--dark-gray);
+    }
+  }
+}
+
+.expanded {
+  width: 16rem;
+}
