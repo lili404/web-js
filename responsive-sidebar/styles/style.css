@@ -33,7 +33,7 @@ nav {
   position: fixed;
   overflow: hidden;
   background-color: var(--navbar-color);
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
 }
 nav ul {
   height: 100%;
@@ -54,23 +54,23 @@ nav ul li a {
   text-decoration: none;
   gap: 2rem;
   color: var(--white);
-  transition: color 0.5s ease;
 }
 nav ul li a i.material-icons {
   font-size: 2rem;
   color: var(--dark-gray);
+  transition: color 0.2s ease;
 }
 nav ul li a:hover i.material-icons {
   color: var(--white);
 }
-nav ul li:first-child a {
-  padding: 0 0.5rem;
+nav ul li:first-child {
+  padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 600;
   gap: 1.5rem;
   cursor: pointer;
 }
-nav ul li:first-child a i {
+nav ul li:first-child i.material-icons {
   font-size: 2.5rem;
   color: var(--main-color);
 }

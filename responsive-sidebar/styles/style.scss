@@ -34,16 +34,18 @@ nav {
   position: fixed;
   overflow: hidden;
   background-color: var(--navbar-color);
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
 
   ul {
     height: 100%;
     display: flex;
     flex-direction: column;
+
     li {
       height: 5rem;
       display: flex;
       padding: 0.75rem;
+
       a {
         width: 100%;
         height: 3.5rem;
@@ -53,11 +55,11 @@ nav {
         text-decoration: none;
         gap: 2rem;
         color: var(--white);
-        transition: color 0.5s ease;
 
         i.material-icons {
           font-size: 2rem;
           color: var(--dark-gray);
+          transition: color 0.2s ease;
         }
         &:hover {
           i.material-icons {
@@ -65,20 +67,20 @@ nav {
           }
         }
       }
-      &:first-child {
-        a {
-          padding: 0 0.5rem;
-          font-size: 1.5rem;
-          font-weight: 600;
-          gap: 1.5rem;
-          cursor: pointer;
 
-          i {
-            font-size: 2.5rem;
-            color: var(--main-color);
-          }
+      &:first-child {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        gap: 1.5rem;
+        cursor: pointer;
+
+        i.material-icons {
+          font-size: 2.5rem;
+          color: var(--main-color);
         }
       }
+
       &:nth-child(5) {
         margin-top: auto;
       }
