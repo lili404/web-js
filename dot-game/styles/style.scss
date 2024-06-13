@@ -16,7 +16,6 @@ body {
   justify-content: center;
   font-size: 1rem;
   position: absolute;
-  background-color: #2e8343;
   color: #ffffff;
 }
 
@@ -55,4 +54,9 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: #ededed;
+}
+
+.hide-status {
+  transform: translateY(-100%);
+  transition: transform 0.5s;
 }

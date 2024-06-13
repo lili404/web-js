@@ -6,6 +6,20 @@ let playerDot;
 let playerPosition;
 let ws;
 
+const serverStatus = (param) => {
+  const serverStatus = document.querySelector(".server-status");
+  if (param == "online") {
+    serverStatus.innerHTML = "Online. Hope on with your friend.";
+    serverStatus.style.backgroundColor = "#2e8343";
+  } else {
+    serverStatus.innerHTML = "Offline. Check if the server is up and running.";
+    serverStatus.style.backgroundColor = "#83312e";
+  }
+  setTimeout(() => {
+    serverStatus.classList.add("hide-status");
+  }, 3000);
+};
+
 const generateRandomPosition = () => {
   return {
     x: Math.floor(Math.random() * gridSize) + 1,
@@ -78,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ws.onopen = () => {
     console.log("Connected to the server");
+    serverStatus("online");
   };
 
   ws.onmessage = (event) => {
@@ -103,9 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   ws.onerror = () => {
-    const serverStatus = document.querySelector(".server-status");
-    serverStatus.innerHTML = "Offline. Check if the server is up and running.";
-    serverStatus.style.backgroundColor = "#83312e";
+    serverStatus("offline");
   };
 });
 
